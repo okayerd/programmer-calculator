@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Calculator Body: 56dp x 66dp rounded card, centered at (54, 54), x from 26 to 82, y from 21 to 87 -->
+    <path
+        android:fillColor="#222B3D"
+        android:strokeColor="#38BDF8"
+        android:strokeWidth="2"
+        android:pathData="M32,24 L76,24 A6,6 0 0 1 82,30 L82,78 A6,6 0 0 1 76,84 L32,84 A6,6 0 0 1 26,78 L26,30 A6,6 0 0 1 32,24 Z" />
+    <!-- Display Screen -->
+    <path
+        android:fillColor="#0E131F"
+        android:strokeColor="#1E293B"
+        android:strokeWidth="1"
+        android:pathData="M31,30 L77,30 A3,3 0 0 1 80,33 L80,45 A3,3 0 0 1 77,48 L31,48 A3,3 0 0 1 28,45 L28,33 A3,3 0 0 1 31,30 Z" />
+    <!-- Screen Accent Display "0x" and binary ticks -->
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M33,36 L36,36 L36,37 L34,37 L34,41 L36,41 L36,42 L33,42 Z
+                          M38,36 L39,36 L40.5,39 L42,36 L43,36 L41.2,39 L43,42 L42,42 L40.5,39.3 L39,42 L38,42 L39.8,39 Z" />
+    <!-- Bits dots on screen -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M52,38h3v4h-3z M57,38h3v4h-3z M65,38h3v4h-3z M73,38h3v4h-3z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M61,38h3v4h-3z M69,38h3v4h-3z" />
+    <!-- Keypad Grid (Rows of programmer buttons) -->
+    <!-- Row 1: Logic keys (HEX/BIN tags) -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M31,52h8v5h-8z M42,52h8v5h-8z M53,52h8v5h-8z M64,52h14v5h-14z" />
+    <!-- Row 2: Standard programmer keys -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M31,60h8v6h-8z M42,60h8v6h-8z M53,60h8v6h-8z M64,60h6v6h-6z M72,60h6v6h-6z" />
+    <!-- Row 3: Key row -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M31,68h8v6h-8z M42,68h8v6h-8z M53,68h8v6h-8z M64,68h6v6h-6z M72,68h6v6h-6z" />
+    <!-- Row 4: Bottom row with cyan equals/eval button -->
+    <path
+        android:fillColor="#1E293B"
+        android:pathData="M31,76h8v5h-8z M42,76h8v5h-8z M53,76h8v5h-8z" />
+    <path
+        android:fillColor="#38BDF8"
+        android:pathData="M64,76h14v5h-14z" />
+</vector>

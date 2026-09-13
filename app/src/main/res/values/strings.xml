@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Programmer Calculator</string>
+    <string name="calc_hex">HEX</string>
+    <string name="calc_dec">DEC</string>
+    <string name="calc_oct">OCT</string>
+    <string name="calc_bin">BIN</string>
+    <string name="calc_history">History</string>
+    <string name="calc_clear_history">Clear History</string>
+    <string name="calc_no_history">No calculation history yet</string>
+    <string name="calc_signed">SIGNED</string>
+    <string name="calc_unsigned">UNSIGNED</string>
+    <string name="calc_undo">Undo</string>
+    <string name="calc_clear">AC</string>
+    <string name="calc_backspace">⌫</string>
+    <string name="calc_about">About &amp; Privacy</string>
+    <string name="developer_name">Noor Tech Apps</string>
+    <string name="developer_email">noortechapp@gmail.com</string>
+    <string name="app_version">Version 1.0.0</string>
+    <string name="privacy_policy_title">Privacy Policy</string>
+    <string name="privacy_policy_desc">Programmer Calculator is committed to protecting your privacy. This application operates entirely offline on your device.\n\n• Zero Data Collection: We do not collect, track, store, or transmit any personal data, identifiers, or analytics.\n• Local Storage: Calculation history is saved strictly on your local device using a secure local database and is never shared.\n• Permissions: Only VIBRATE permission is used to provide tactile haptic feedback for key presses.\n• Third Parties: No third-party tracking, advertising, or profiling SDKs are included.</string>
+    <string name="contact_developer">Contact Developer</string>
+    <string name="close">Close</string>
+</resources>

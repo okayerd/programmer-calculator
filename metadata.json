@@ -1,0 +1,8 @@
+{
+  "name": "Programmer Calculator",
+  "developer": "Noor Tech Apps",
+  "contactEmail": "noortechapp@gmail.com",
+  "description": "Modern and premium Programmer Calculator supporting HEX, DEC, OCT, BIN, 64/32/16/8-bit modes, bitwise logic, and interactive bitboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
