@@ -1,22 +1,102 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Programmer Calculator
 
-# Run and deploy your AI Studio app
+A modern, fast, and 100% offline **Programmer Calculator** designed for software engineers, embedded system developers, and computer science students. Built with modern Android technologies: **Kotlin**, **Jetpack Compose (Material 3)**, and **Room Database**.
 
-This contains everything you need to run your app locally.
+Developed with care by **Noor Tech Apps**.
 
-View your app in AI Studio: https://ai.studio/apps/4ada96ec-1254-4c6b-94c9-a593cb740f74
+---
 
-## Run Locally
+## Key Features
 
-**Prerequisites:**  [Android Studio](https://developer.android.com/studio)
+- **Multi-Radix Real-Time Conversion:** Simultaneous live display of values in **HEX (Hexadecimal)**, **DEC (Decimal)**, **OCT (Octal)**, and **BIN (Binary)**.
+- **Interactive 64-Bit Bitboard:** Tap any bit (from 0 to 63) to toggle between `0` and `1` in real-time, grouped into clean 4-bit nibbles.
+- **Configurable Word Sizes:** Instant switching and bit-masking between:
+  - **QWORD** (64-bit)
+  - **DWORD** (32-bit)
+  - **WORD** (16-bit)
+  - **BYTE** (8-bit)
+- **Signed & Unsigned Arithmetic:** Full support for Two's Complement signed representation and unsigned calculations.
+- **Bitwise Logic Operations:** Comprehensive bitwise operator suite:
+  - `AND`, `OR`, `XOR`, `NOT`, `NAND`, `NOR`
+  - Bit Shifts: Logical Left Shift (`<<`) and Right Shift (`>>`)
+- **Expression Evaluation:** Supports complex arithmetic expressions with operator precedence and parentheses `(`, `)`.
+- **50-Step Undo History:** Dedicated snapshot stack allows seamless undo of calculations, bit toggles, and base conversions.
+- **Local Calculation History:** Secure, sandboxed SQLite/Room database saves past calculations locally. Tap any historical entry to restore it instantly.
+- **Copy to Clipboard:** Long-press any radix row (HEX, DEC, OCT, BIN) to immediately copy formatted results.
+- **100% Offline & Private:** Zero analytics, zero ad tracking, zero telemetry. Works completely without an internet connection.
 
+---
 
-1. Open Android Studio
-2. Select **Open** and choose the directory containing this project
-3. Allow Android Studio to fix any incompatibilities as it imports the project.
-4. Create a file named `.env` in the project directory and set `GEMINI_API_KEY` in that file to your Gemini API key (see `.env.example` for an example)
-5. Remove this line from the app's `build.gradle.kts` file: `signingConfig = signingConfigs.getByName("debugConfig")`
-6. Run the app on an emulator or physical device
-7. If you have already published your app in AI Studio, please [request upload key reset](https://support.google.com/googleplay/android-developer/answer/9842756#zippy=%2Crequest-an-upload-key-reset) in Google Play Console.
+## Tech Stack & Architecture
+
+- **Language:** [Kotlin](https://kotlinlang.org/)
+- **UI Framework:** [Jetpack Compose](https://developer.android.com/jetpack/compose) (Material 3)
+- **Architecture:** MVVM (Model-View-ViewModel) + Repository Pattern + Clean Architecture
+- **State Management:** Kotlin Coroutines & `StateFlow`
+- **Local Persistence:** Android [Room Database](https://developer.android.com/training/data-storage/room)
+- **Build System:** Gradle Kotlin DSL (`build.gradle.kts`) with Version Catalog (`libs.versions.toml`)
+
+---
+
+## Project Structure
+
+```text
+programmer-calculator/
+├── app/
+│   ├── src/main/java/com/example/
+│   │   ├── engine/          # Bitwise and arithmetic calculation engine
+│   │   ├── viewmodel/       # StateFlow and calculator state management
+│   │   ├── model/           # Radix, WordSize, and SignMode models
+│   │   ├── data/local/      # Room database entities and DAOs
+│   │   └── ui/
+│   │       ├── screens/     # Main Calculator composable screens
+│   │       ├── components/  # Bitboard, Keypad, Radix rows, About/Privacy dialog
+│   │       └── theme/       # Dark/Light developer color palette & typography
+│   └── build.gradle.kts     # App build configuration
+├── docs/                    # Privacy Policy web page for GitHub Pages
+├── PRIVACY_POLICY.md        # Complete privacy policy
+└── build.gradle.kts         # Root Gradle build configuration
+```
+
+---
+
+## Getting Started & Building Locally
+
+### Prerequisites
+- [Android Studio Ladybug or newer](https://developer.android.com/studio)
+- JDK 17 or JDK 21
+- Android SDK Platform 36 (Min SDK: 24 / Android 7.0+)
+
+### Building from Source
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/okayerd/programmer-calculator.git
+   cd programmer-calculator
+   ```
+
+2. Open the project in Android Studio.
+
+3. Run unit tests:
+   ```bash
+   ./gradlew testDebugUnitTest
+   ```
+
+4. Build Debug APK:
+   ```bash
+   ./gradlew assembleDebug
+   ```
+
+---
+
+## Privacy Policy
+
+Programmer Calculator is committed to user privacy. We do not collect, store, or transmit any personal data. For our complete policy, please see our [Privacy Policy](PRIVACY_POLICY.md) or visit our online page at [GitHub Pages](https://okayerd.github.io/programmer-calculator/).
+
+---
+
+## Contact & Support
+
+**Noor Tech Apps**  
+- Email: [noortechapp@gmail.com](mailto:noortechapp@gmail.com)  
+- Feedback and feature requests are always welcome!
